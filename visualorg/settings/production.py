@@ -7,7 +7,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':'visual_database',
         'USER':'visualorg',
-        'PASSWORD':'visualorg',
+        'PASSWORD':'bdHna391sn5sJd3',
         'HOST':'',
         'PORT':'',
     }
