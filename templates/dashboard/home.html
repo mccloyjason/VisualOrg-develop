@@ -1,0 +1,1512 @@
+<!doctype html public "✰">
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+
+		<title>Adminica | The Professional Admin Theme</title>
+
+  		<meta name="description" content="http://themeforest.net/item/adminica-the-professional-admin-template/160638">
+  		<meta name="author" content="Oisin Lavery - Tricycle Labs">
+
+	<!-- iPhone, iPad and Android specific settings -->
+
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1;">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href="{{ STATIC_URL }}images/interface/iOS_icon.png" rel="apple-touch-icon">
+
+	<!-- Styles -->
+
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/adminica/reset.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+
+		<!-- NOTE: The following css files have been combined and minified into plugins.css
+
+		<link rel="stylesheet" href="styles/plugins/colorpicker/colorpicker.css">
+		<link rel="stylesheet" href="styles/plugins/datatables/datatables.css">
+		<link rel="stylesheet" href="styles/plugins/elfinder/elfinder.css">
+		<link rel="stylesheet" href="styles/plugins/fancybox/fancybox.css">
+		<link rel="stylesheet" href="styles/plugins/fullcalendar/fullcalendar.css">
+		<link rel="stylesheet" href="styles/plugins/isotope/isotope.css">
+		<link rel="stylesheet" href="styles/plugins/multiselect/multiselect.css">
+		<link rel="stylesheet" href="styles/plugins/select2/select2.css">
+		<link rel="stylesheet" href="styles/plugins/selectbox/selectbox.css">
+		<link rel="stylesheet" href="styles/plugins/slidernav/slidernav.css">
+		<link rel="stylesheet" href="styles/plugins/slidernav/smallipop.css">
+		<link rel="stylesheet" href="styles/plugins/syntaxhighlighter/syntaxhighlighter.css">
+		<link rel="stylesheet" href="styles/plugins/syntaxhighlighter/shThemeDefault.css">
+		<link rel="stylesheet" href="styles/plugins/tagit/tagit.css">
+		<link rel="stylesheet" href="styles/plugins/themeroller/themeroller.css">
+		<link rel="stylesheet" href="styles/plugins/tinyeditor/tinyeditor.css">
+		<link rel="stylesheet" href="styles/plugins/tiptip/tiptip.css">
+		<link rel="stylesheet" href="styles/plugins/uistars/uistars.css">
+		<link rel="stylesheet" href="styles/plugins/uitotop/uitotop.css">
+		<link rel="stylesheet" href="styles/plugins/uniform/uniform.css"> -->
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/plugins/all/plugins.css">
+
+
+		<!-- NOTE: The following css files have been combined and minified into all.css
+
+		<link rel="stylesheet" href="styles/adminica/text.css">
+		<link rel="stylesheet" href="styles/adminica/grid.css">
+		<link rel="stylesheet" href="styles/adminica/main.css">
+		<link rel="stylesheet" href="styles/adminica/mobile.css">
+		<link rel="stylesheet" href="styles/adminica/base.css">
+		<link rel="stylesheet" href="styles/adminica/ie.css">
+		<link rel="stylesheet" href="styles/themes/switcher.css"> -->
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/adminica/all.css">
+
+
+		<!-- Style Switcher
+
+		The following stylesheet links are used by the styleswitcher to allow for dynamically changing the Adminica layout, nav, skin, theme and background.
+		Styleswitcher documentation: http://style-switcher.webfactoryltd.com/documentation/
+
+		layout_switcher.php	: layout - fluid by default.								(eg. styles/themes/layout_switcher.php?default=layout_fixed.css)
+		nav_switcher.php	: header and sidebar nav  positioning - sidebar by default.	(eg. styles/themes/nav_switcher.php?default=header_top.css)
+		skin_switcher.php 	: Adminica skin - dark by default.							(eg. styles/themes/skin_switcher.php?default=theme_light.css)
+		theme_switcher.php 	: colour theme - black/grey by default.						(eg. styles/themes/theme_switcher.php?default=theme_red.css)
+		bg_switcher.php 	: background image - dark boxes by default.					(eg. styles/themes/bg_switcher.php?default=bg_honeycomb.css)	-->
+
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/themes/layout_switcher.php?default=layout_fixed.css" >
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/themes/nav_switcher.php?default=nav_top.css" >
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/themes/skin_switcher.php?default=switcher.css" >
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?default=theme_blue.css" >
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/themes/bg_switcher.php?default=bg_honeycomb.css" >
+
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles/adminica/colours.css"> <!-- this file overrides the theme's default colour scheme, allowing more colour combinations (see layout example page)
+
+
+		<!-- NOTE: The following js files have been conbined and minified into plugins-min.js
+
+		<script src="scripts/jquery/jquery.js"></script>
+		<script src="scripts/jquery/jqueryui.js"></script>
+		<script src="scripts/modernizr/modernizr.js"></script>
+		<script src="scripts/prefixfree/prefixfree.js"></script>
+		<script src="scripts/pjax/pjax.js"></script>
+		<script src="scripts/isotope/isotope.js"></script>
+		<script src="scripts/autogrow/autogrow.js"></script>
+		<script src="scripts/colorpicker/colorpicker.js"></script>
+		<script src="scripts/cookie/cookie.js"></script>
+		<script src="scripts/datatables/datatables.js"></script>
+		<script src="scripts/elfinder/elfinder.js"></script>
+		<script src="scripts/dragscroll/dragScroll.js"></script>
+		<script src="scripts/tinyeditor/tinyeditor.js"></script>
+		<script src="scripts/fancybox/fancybox.js"></script>
+		<script src="scripts/flot/flot_excanvas.js"></script>
+		<script src="scripts/flot/flot.js"></script>
+		<script src="scripts/flot/flot_resize.js"></script>
+		<script src="scripts/flot/flot_pie.js"></script>
+		<script src="scripts/flot/flot_pie_update.js"></script>
+		<script src="scripts/fullcalendar/fullcalendar.js"></script>
+		<script src="scripts/fullcalendar/fullcalendar_gcal.js"></script>
+		<script src="scripts/hoverintent/hoverIntent.js"></script>
+		<script src="scripts/iscroll/iscroll.js"></script>
+		<script src="scripts/knob/knob.js"></script>
+		<script src="scripts/multiselect/multiselect.js"></script>
+		<script src="scripts/select2/select2.js"></script>
+		<script src="scripts/selectbox/selectbox.js"></script>
+		<script src="scripts/slidernav/slidernav.js"></script>
+		<script src="scripts/smallipop/smallipop.js"></script>
+		<script src="scripts/sparkline/sparkline.js"></script>
+		<script src="scripts/syntaxhighlighter/shCore.js"></script>
+		<script src="scripts/syntaxhighlighter/shBrushJScript.js"></script>
+		<script src="scripts/syntaxhighlighter/shBrushXml.js"></script>
+		<script src="scripts/tagit/tagit.js"></script>
+		<script src="scripts/timepicker/timepicker.js"></script>
+		<script src="scripts/tinyeditor/tinyeditor.js"></script>
+		<script src="scripts/tiptip/tiptip.js"></script>
+		<script src="scripts/touchpunch/touchpunch.js"></script>
+		<script src="scripts/uistars/uistars.js"></script>
+		<script src="scripts/uitotop/uitotop.js"></script>
+		<script src="scripts/uniform/uniform.js"></script>
+		<script src="scripts/validation/validation.js"></script> -->
+		<script src="{{ STATIC_URL }}scripts/plugins-min.js"></script>
+
+
+		<!-- NOTE: The following js files have been conbined and minified into adminica_all-min.js
+
+		<script src="scripts/adminica/adminica_ui.js"></script>
+		<script src="scripts/adminica/adminica_mobile.js"></script>
+		<script src="scripts/adminica/adminica_datatables.js"></script>
+		<script src="scripts/adminica/adminica_calendar.js"></script>
+		<script src="scripts/adminica/adminica_charts.js"></script>
+		<script src="scripts/adminica/adminica_gallery.js"></script>
+		<script src="scripts/adminica/adminica_various.js"></script>
+		<script src="scripts/adminica/adminica_wizard.js"></script>
+		<script src="scripts/adminica/adminica_forms.js"></script>
+		<script src="scripts/adminica/adminica_load.js"></script>	-->
+		<script src="{{ STATIC_URL }}scripts/adminica/adminica_all-min.js"></script>
+
+
+		</head>
+	<body>	<div id="pjax">
+		<div id="wrapper" data-adminica-nav-top="1" data-adminica-side-top="1">
+			<div id="topbar" class="clearfix">
+
+	<a href="dashboard_sorter.php" class="logo"><span>Adminica</span></a>
+
+	<div class="user_box dark_box clearfix">
+		<img src="images/interface/profile.jpg" width="55" alt="Profile Pic" />
+		<h2>Administrator</h2>
+		<h3><a class="text_shadow" href="#">John Smith</a></h3>
+		<ul>
+			<li><a href="#">profile</a><span class="divider">|</span></li>
+			<li><a href="#">settings</a><span class="divider">|</span></li>
+			<li><a href="{% url 'logout' %}" class="dialog_button" data-dialog="dialog_logout">Logout</a></li>
+		</ul>
+	</div><!-- #user_box -->
+</div><!-- #topbar -->			<div id="sidebar" class="sidebar pjax_links">
+	<div class="cog">+</div>
+
+	<a href="index.php" class="logo"><span>Adminica</span></a>
+
+	<div class="user_box dark_box clearfix">
+		<img src="images/interface/profile.jpg" width="55" alt="Profile Pic" />
+		<h2>Administrator</h2>
+		<h3><a href="#">John Smith</a></h3>
+		<ul>
+			<li><a href="#">settings</a><span class="divider">|</span></li>
+			<li><a href="login_slide.php" class="dialog_button" data-dialog="dialog_logout">Logout</a></li>
+		</ul>
+	</div><!-- #user_box -->
+
+	<ul class="side_accordion" id="nav_side"> <!-- add class 'open_multiple' to change to from accordion to toggles -->
+		<li><a href="#" class="dialog_button" data-dialog="dialog_welcome"><img src="{{ STATIC_URL }}images/icons/small/grey/speech_bubble.png"/>Adminica</a></li>
+		<li><a href="empty.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/document.png"/>Empty</a></li>
+
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/mail.png"/>Mailbox<div class="alert badge alert_red">5</div></a>
+			<ul class="drawer">
+				<li><a href="#">Inbox</a></li>
+				<li><a href="#">Sent Items</a></li>
+				<li><a href="#">Drafts<div class="alert badge alert_grey">2</div></a></li>
+				<li><a href="#">Trash<div class="alert badge alert_grey">3</div></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/documents.png"/>Documents<div class="alert badge alert_black">2</div></a>
+			<ul class="drawer">
+				<li><a href="files.php" class="pjax">View All</a></li>
+				<li><a href="files.php" class="pjax">Upload/Download<div class="alert badge alert_grey">2</div></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/users.png"/>Members</a>
+			<ul class="drawer">
+				<li><a href="contacts.php" class="pjax">Add New</a></li>
+				<li><a href="contacts.php" class="pjax">Edit/Delete</a></li>
+				<li><a href="contacts.php" class="pjax">Search Profiles</a></li>
+			</ul>
+		</li>
+		<li><a href="http://www.google.com"><img src="{{ STATIC_URL }}images/icons/small/grey/graph.png"/>Statistics</a></li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/cog_2.png"/>Settings</a>
+			<ul class="drawer">
+				<li><a href="#">Account</a></li>
+				<li><a href="#">System</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<div id="search_side" class="dark_box"><form><input class="" type="text" placeholder="Search Adminica..."></form></div>
+
+	<ul id="side_links" class="side_links" style="margin-bottom:0;">
+		<li><a href="#">Documentation</a>
+		<li><a href="#">Support Forum</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Subscribe</a></li>
+	</ul>
+</div><!-- #sidebar -->
+			<div id="stackbar" class="stackbar">	<div class="user_box dark_box clearfix">
+		<img src="{{ STATIC_URL }}images/interface/profile.jpg" width="55" alt="Profile Pic" />
+		<h2>Administrator</h2>
+		<h3><a href="#">John Smith</a></h3>
+		<ul>
+			<li><a href="#">settings</a><span class="divider">|</span></li>
+			<li><a href="login_slide.php" class="dialog_button" data-dialog="dialog_logout">Logout</a></li>
+		</ul>
+	</div>
+	<ul class="">
+		<li>
+			<a href="#"><img src="{{ STATIC_URL }}images/icons/large/grey/computer_imac.png"/><span>Dashboard</span></a>
+			<ul>
+				<li><a href="index.php" class="pjax">Dashboard</a></li>
+				<li><a href="layout.php" class="pjax">Layout</a></li>
+				<li><a href="text.php" class="pjax">Typography</a></li>
+				<li><a href="isolated_wizard.php" class="pjax">Isolated</a></li>
+				<li><a href="logout_button.php" class="pjax">Logout</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#"><img src="{{ STATIC_URL }}images/icons/large/grey/mail.png"/><span>Widgets</span><div class="alert badge alert_green">1</div></a>
+			<ul>
+				<li><a href="#">Widgets</a></li>
+				<li><a href="tabs.php" class="pjax">Tabs</a></li>
+				<li><a href="accordions.php" class="pjax">Accordions</a></li>
+				<li><a href="wizard.php" class="pjax">Wizard</a></li>
+				<li><a href="code.php" class="pjax">Code View</a></li>
+				<li><a href="editor.php" class="pjax">Text Editor</a></li>
+				<li><a href="dialog.php" class="pjax">Dialogs</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#"><img src="{{ STATIC_URL }}images/icons/large/grey/users.png"/><span>Contacts</span><div class="alert badge alert_blue">2</div></a>
+			<ul>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="contacts.php" class="pjax">Profiles</a></li>
+				<li><a href="contacts.php" class="pjax">Manage</a></li>
+				<li><a href="#" class="dialog_button" data-dialog="dialog_register">Add</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#"><img src="{{ STATIC_URL }}images/icons/large/grey/graph.png"/><span>Reports</span></a>
+			<ul>
+				<li><a href="#" class="pjax">Reports</a></li>
+				<li><a href="charts.php" class="pjax">Graphs</a></li>
+				<li><a href="graphs.php" class="pjax">Charts</a></li>
+			</ul>
+		</li>
+	</ul>
+
+</div><!-- Closing Div for Stack Nav, you can boxes under the stack before this -->
+
+			<div id="main_container" class="main_container container_16 clearfix">
+				<div id="nav_top" class="dropdown_menu clearfix round_top">
+	<ul class="clearfix">
+		<li class="icon_only"><a href="index.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/laptop.png"/><span class="display_none">Home</span></a></li>
+
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/frames.png"/><span>Layout</span></a>
+			<ul class="open_multiple">
+				<li><a href="layout.php" class="pjax"><span>Grid System</span></a></li>
+				<li><a href="text.php" class="pjax"><span>Text & Typography</span></a></li>
+				<li><a class="hide_mobile" href="#"><span>Layout Width</span></a>
+					<ul class="drawer ">
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=layout_fixed.css"><span>Fixed</span></a></li>
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=switcher.css"><span>Fluid</span></a></li>
+					</ul>
+				</li>
+				<li><a class="hide_mobile" href="#"><span>Layout Position</span></a>
+					<ul class="drawer">
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=switcher.css"><span>Side</span></a></li>
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_top.css"><span>Top</span></a></li>
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_slideout.css"><span>Slide</span></a></li>
+						<li><a class="hide_mobile" href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_stacks.css"><span>Stacks</span></a></li>
+					</ul>
+				</li>
+				<li><a class="hide_mobile" href="#"><span>Isolated Layout</span><div class="alert badge">&#9733</div></a>
+					<ul class="drawer">
+						<li><a href="isolated_tabs.php" class="pjax"><span>Isolated Tabs</span></a></li>
+						<li><a href="isolated_wizard.php" class="pjax"><span>Isolated Wizard</span></a></li>
+						<li><a href="isolated_graphs.php" class="pjax"><span>Isolated Graphs</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/coverflow.png"/><span>Widgets</span></a>
+			<ul>
+				<li><a href="tabs.php" class="pjax"><span>Tab Boxes</span></a></li>
+				<li><a href="accordions.php" class="pjax"><span>Accordions Boxes</span></a></li>
+				<li><a href="wizard.php" class="pjax"><span>Step by Step Wizard</span><div class="alert badge">&#9733</div></a></li>
+				<li><a href="code.php"><span>Code View</span></a></li>
+				<li><a href="editor.php" class="pjax"><span>WYSIWYG Editor</span></a></li>
+				<li><a href="dialog.php" class="pjax"><span>Dialog Windows</span><div class="alert badge">&#9733</div></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/create_write.png"/><span>Forms</span></a>
+			<ul>
+				<li><a href="form_fields.php" class="pjax"><span>Input Fields</span><div class="alert badge">&#9733</div></a></li>
+				<li><a href="buttons.php" class="pjax"><span>Buttons</span></a></li>
+				<li><a href="form_validation.php" class="pjax"><span>Validation</span></a></li>
+				<li><a href="#"><span>Example Forms</span><div class="alert badge">&#9733</div></a>
+					<ul class="drawer">
+						<li><a href="form_contact.php" class="pjax"><span>Contact</span></a></li>
+						<li><a href="form_grid.php" class="pjax"><span>Grid</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="gallery.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/images.png"/><span>Gallery</span></a></li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/blocks_images.png"/><span>Tables</span></a>
+			<ul>
+				<li><a href="tables.php" class="pjax"><span>DataTables</span></a></li>
+				<li><a href="tables_static.php" class="pjax"><span>Regular Tables</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/file_cabinet.png"/><span>Org</span><div class="alert badge">&#9733</div></a>
+			<ul>
+				<li><a href="files.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/folder.png"/><span>Files</span></a></li>
+				<li><a href="contacts.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/users.png"/><span>Contacts</span><div class="alert badge">&#9733</div></a></li>
+			</ul>
+		</li>
+		<li><a href="calendar.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/month_calendar.png"/><span>Cal</span></a></li>
+		<li><a href="charts.php" class="pjax"><img src="{{ STATIC_URL }}images/icons/small/grey/graph.png"/><span>Charts</span></a>
+			<ul class="dropdown_right">
+				<li><a href="charts.php" class="pjax"><span>Large Charts</span></a></li>
+				<li><a href="graphs.php" class="pjax"><span>Info Graphs</span></a><div class="alert badge">&#9733</div></li>
+			</ul></li>
+		<li class="icon_only"><a href="#"><img src="{{ STATIC_URL }}images/icons/small/grey/locked_2.png"/><span class="display_none">Login</span><div class="alert badge">&#9733</div></a>
+			<ul class="dropdown_right">
+				<li><a href="login_button.php" class="pjax"><span>Regular Login</span></a></li>
+				<li><a href="#" class="dialog_button" data-dialog="dialog_logout"><span>Slide Login</span><div class="alert badge">&#9733</div></a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<div id="mobile_nav">
+		<div class="main"></div>
+		<div class="side"></div>
+	</div>
+
+</div><!-- #nav_top -->
+				<div class="flat_area grid_16">
+					<h2>Dashboard
+						<small>- Welcome to Adminica.</small>
+						<div class="holder">
+							<label>Dynamic Loading:</label>
+<div class="jqui_checkbox" id="pjax_switch">
+	<input type="radio" name="dynamic_switch" id="dynamic_on"/><label for="dynamic_on">On</label>
+	<input type="radio" name="dynamic_switch" id="dynamic_off" checked="checked"/><label for="dynamic_off">Off</label>
+</div>						</div>
+					</h2>
+				</div>
+				<div class="box grid_16 tabs">
+					<ul class="tab_header clearfix">
+						<li><a href="#tabs-1">System Stats</a></li>
+						<li><a href="#tabs-2">Server Stats</a></li>
+					</ul>
+					<div class="controls">
+						<a href="#" class="grabber"></a>
+						<a href="#" class="toggle"></a>
+						<a href="#" class="show_all_tabs"></a>
+					</div>
+					<div class="toggle_container">
+						<div id="tabs-1" class="block lines">
+							<div class="columns">
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="value_tag"><span>+453 today</span></div>
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_bar large random_number_5"></span>
+											</div>
+										</div>
+										<label>Leads per hour</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="value_tag"><span>estimated</span></div>
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_line large random_number_5"></span>
+											</div>
+										</div>
+										<label>Daily Hits</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="split one">
+											<div class="big_letter green">Good</div>
+										</div>
+										<label>Remote Status</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_pie large random_number_3">
+												26, 74, 105</span>
+											</div>
+										</div>
+										<label>Resources</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top no_border_right">
+									<div class="info_box">
+										<div class="split two">3,122 <small>ext</small></div>
+										<div class="split two red">253 <small>int</small></div>
+										<label>Connections</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="tabs-2" class="block lines ui-tabs-hide">
+							<div class="columns">
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="value_tag"><span>+453 today</span></div>
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_bar large random_number_5"></span>
+											</div>
+										</div>
+										<label>Leads per hour<div class="comment icon_small chat_black"><a href="#"></a></div></label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="value_tag"><span>estimated</span></div>
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_line large random_number_5"></span>
+											</div>
+										</div>
+										<label>Daily Hits</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="split one">
+											<div class="big_letter yellow">Fair</div>
+										</div>
+										<label>Remote Status</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top">
+									<div class="info_box">
+										<div class="split one">
+											<div class="chart">
+												<span class="spark_pie large random_number_3">
+												26, 74, 105</span>
+											</div>
+										</div>
+										<label>Resources</label>
+									</div>
+								</div>
+								<div class="col_20 no_border_top no_border_right">
+									<div class="info_box">
+										<div class="split two">3,122 <small>ext</small></div>
+										<div class="split two red">253 <small>int</small></div>
+										<label>Connections</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_container glass clearfix">
+				<div style="padding:0;">
+					<div class="columns lines">
+						<div class="col_20 no_border_top">
+							<div class="info_box">
+								<div class="split one">
+									<a href="#"><img src="{{ STATIC_URL }}images/icons/large/white/alert.png" width="36" height="36" /></a>
+								</div>
+								<label>View Alerts</label>
+							</div>
+						</div>
+						<div class="col_20 no_border_top">
+							<div class="info_box">
+								<div class="split three green">US</div>
+								<div class="split three orange">Asia</div>
+								<div class="split three red">Europe</div>
+								<label>Global</label>
+							</div>
+						</div>
+						<div class="col_20 no_border_top">
+							<div class="info_box">
+								<div class="split one"><span class="spark_bar large random_number_5">0,5,1,4,2,3</span></div>
+								<label>Trends</label>
+							</div>
+						</div>
+						<div class="col_20 no_border_top">
+							<div class="info_box">
+								<div class="split one">
+									<div class="big_letter red">30%</div>
+								</div>
+								<label>Server Health</label>
+							</div>
+						</div>
+						<div class="col_20 no_border_right no_border_top">
+							<div class="info_box">
+								<div class="split one">
+									<div class="chart">
+										<span class="spark_bar large random_number_5">0,5,1,4,2,3</span>
+									</div>
+								</div>
+								<label>User Stats</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_container container_16 clearfix">
+				<div class="box grid_8 tabs">
+					<ul class="tab_header clearfix">
+						<li><a href="#tabs-1">Quicklinks</a></li>
+						<li><a href="#tabs-2">Content</a></li>
+					</ul>
+					<div class="controls">
+						<a href="#" class="grabber"></a>
+						<a href="#" class="toggle"></a>
+						<a href="#" class="show_all_tabs"></a>
+					</div>
+					<div class="toggle_container">
+						<div id="tabs-1" class="block">
+							<ul class="flat medium">
+								<li><span class="spark_bar small random_number_5 spark_inline"></span> Aenean tempor ullamcorper</li>
+								<li><span class="spark_line small random_number_5 spark_inline"></span>Rutrum commodo, vehicula tempus</li>
+								<li><span class="spark_bar small random_number_5 spark_inline"></span><a href="#">Curabitur nec arcu</a></li>
+								<li><span class="spark_bar small random_number_5 spark_inline"></span> Aenean tempor ullamcorper</li>
+								<li><span class="spark_line small random_number_5 spark_inline"></span>Rutrum commodo, vehicula tempus</li>
+								<li><span class="spark_line small random_number_5 spark_inline"></span>Rutrum commodo, vehicula tempus</li>
+							</ul>
+						</div>
+						<div id="tabs-2" class="block">
+							<div class="section">
+								<h1>Primary Heading</h1>
+								<p>Lorem Ipsum is simply dummy text of the <a href="#" title="This is a tooltip">printing industry</a>. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+								<h2>Secondary Heading</h2>
+								<p>Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box grid_8">
+					<div class="block compressed">
+						<form class="validate_form">
+						<fieldset class="label_side top">
+							<label>Support Issue</label>
+							<div>
+								<input type="text">
+							</div>
+						</fieldset>
+						<fieldset class="label_side">
+							<label>Description</label>
+							<div>
+								<textarea style="height:79px;" placeholder="Please provide as much information as possible"></textarea>
+							</div>
+						</fieldset>
+						<fieldset class="label_side">
+							<label>Priority</label>
+							<div>
+								<div class="jqui_radios">
+									<input type="radio" name="answer5" id="yes5"/><label for="yes5">Regular</label>
+									<input type="radio" name="answer5" id="no5"/><label for="no5">Urgent</label>																												</div>
+							</div>
+						</fieldset>
+						<div class="button_bar clearfix">
+							<button class="small dark" type="submit">
+								<img src="{{ STATIC_URL }}images/icons/small/white/speech_bubble.png">
+								<span>Contact</span>
+							</button>
+							<button class="small light send_right" type="reset">
+								<div class="ui-icon ui-icon-circle-close"></div>
+								<span>Cancel</span>
+							</button>
+						</div>
+						</form>
+					</div>
+				</div>
+				<div class="box grid_16">
+					<ul class="block content_accordion ">
+						<li>
+							<h3 class="bar">Adminica Description</h3>
+							<div class="content">
+								<div class="columns">
+									<div class="col_50">
+										<p class="section"><strong>Adminica</strong> is a cleanly coded, beautifully styled, easily customisable, cross-browser compatible <strong>Admin Template</strong> and <strong>Web Application Interface</strong>.</p>
+									</div>
+									<div class="col_50">
+										<p class="section"><strong>Adminica</strong> is packed full of features, allowing you <strong>unlimited combinations</strong> of layouts, controls and styles to ensure you have a trully unique app. </p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_container glass clearfix">
+				<div class="columns" style="padding:10px 10px 0">
+					<div class="flat_area col_30">
+						<h3 style="margin-bottom:0;">Followers <small>- Most Popular</small></h1>
+						<div class="chart" style="margin:5px 0 -5px;">
+							<span class="spark_line_wide random_number_5">
+							26, 74, 102, 153, 25, 26, 74, 102, 153, 25, </span>
+						</div>
+					</div>
+					<div class="col_70">
+						<ul class="picture_tiles clearfix send_right">
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-0.png"></a><div class="alert badge grad_yellow">★</div></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-1.png"></a></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-2.png"></a><div class="alert badge grad_green">↑</div></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-3.png"></a></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-4.png"></a></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-5.png"></a></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-6.png"></a></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-7.png"></a><div class="alert badge grad_red">↓</div></li>
+							<li><a href="contacts.php" class="pjax"><img width="45" alt="Profile Pic" src="{{ STATIC_URL }}images/content/profiles/mangatar-8.png"></a></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="main_container container_16 clearfix">
+				<div class="box grid_8">
+					<div class="block">
+						<fieldset class="label_side label_small no_border">
+							<label>Filter by:</label>
+							<div>
+								<div class="jqui_radios">
+									<input type="radio" name="filter" class="isotope_filter" id="f_all" data-isotope-filter="*" checked="true"/><label for="f_all">All</label>
+									<input type="radio" name="filter" class="isotope_filter" id="f_new" data-isotope-filter=".new"/><label for="f_new">New</label>
+									<input type="radio" name="filter" class="isotope_filter" id="f_cool" data-isotope-filter=".cool"/><label for="f_cool">Cool</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="box grid_8">
+					<div class="block">
+						<fieldset class="label_side label_small no_border">
+							<label>Sort by:</label>
+							<div>
+								<div class="jqui_radios">
+									<input type="radio" name="sort" class="isotope_sort" id="s_name" data-isotope-sort="sort_1" checked="checked"/><label for="s_name">Name</label>
+									<input type="radio" name="sort" class="isotope_sort" id="s_update" data-isotope-sort="sort_2"/><label for="s_update">Update</label>
+									<input type="radio" name="sort" class="isotope_sort" id="s_random" data-isotope-sort="random"/><label for="s_random">Random</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="grid_16">
+					<div class="isotope_holder indented_area">
+						<ul class="gallery feature_tiles clearfix">
+
+	<li class="cool">
+		<a href="{{ STATIC_URL }}styles/theme/switcher2.php?style=switcher.css" class="features">
+				<img src="{{ STATIC_URL }}images/icons/large/grey/frames.png">
+				<span class="name sort_1">Side Nav</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="new">
+		<a href="{{ STATIC_URL }}styles/theme/switcher2.php?style=../header_slideout.css" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/go_back_from_screen_top.png">
+			<span class="name sort_1">Slide Nav</span>
+			<span class="update sort_2">1</span>
+		<div class="starred blue"></div>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="{{ STATIC_URL }}styles/theme/switcher2.php?style=../header_top.css" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/go_back_from_screen.png">
+			<span class="name sort_1">Full Width</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="layout.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/expose.png">
+			<span class="name sort_1">Drag, Sort & Toggle</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="new">
+		<a href="charts.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/chart_8.png">
+			<span class="name sort_1">Graphs & Charts</span>
+			<span class="update sort_2">2</span>
+		<div class="starred green"></div></a>
+	</li>
+
+	<li class="new">
+		<a href="calendar.php" class="features">
+			<img src="images/icons/large/grey/alarm_bell.png">
+			<span class="name sort_1">Events Calendar</span>
+			<span class="update sort_2">2</span>
+		<div class="starred green"></div></a>
+	</li>
+
+	<li class="new">
+		<a href="wizard.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/power.png">
+			<span class="name sort_1">Step by Step Wizard</span>
+			<span class="update sort_2">2</span>
+		<div class="starred green"></div></a>
+	</li>
+
+	<li class="new">
+		<a href="tables_static.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/table.png">
+			<span class="name sort_1">Table Styles</span>
+			<span class="update sort_2">2</span>
+		<div class="starred green"></div></a>
+	</li>
+
+	<li class="cool">
+		<a href="accordions.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/list.png">
+			<span class="name sort_1">Sortable Accordions</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div></a>
+	</li>
+
+	<li class="cool">
+		<a href="{{ STATIC_URL }}styles/theme/switcher1.php?style=switcher.css" class="features">
+			<img src="images/icons/large/grey/monitor.png">
+			<span class="name sort_1">Fluid Width</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="{{ STATIC_URL }}styles/theme/switcher1.php?style=../layout_fixed.css" class="features">
+			<img src="images/icons/large/grey/go_full_screen.png">
+			<span class="name sort_1">Fixed Width</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+	<li class="all">
+		<a href="#" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/map.png">
+			<span class="name sort_1">Unique Navigation</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="{{ STATIC_URL }}styles/theme/switcher1.php?style=switcher.css" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/iphone_4.png">
+			<span class="name sort_1">iOS/Android Ready</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div></a>
+	</li>
+
+	<li class="cool">
+		<a href="#" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/paint_brush.png">
+			<span class="name sort_1">14 Themes</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div></a>
+	</li>
+
+	<li class="new">
+		<a href="#" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/repeat.png">
+			<span class="name sort_1">Theme Switcher</span>
+			<span class="update sort_2">1</span>
+		<div class="starred blue"></div>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="contacts.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/coverflow.png">
+			<span class="name sort_1">Unique Slider Lists</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div></a>
+	</li>
+
+	<li class="all">
+		<a href="buttons.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/chemical.png">
+			<span class="name sort_1">400+ Icons</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="code.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/pencil.png">
+			<span class="name sort_1">Syntax Highlighting</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="buttons.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/record.png">
+			<span class="name sort_1">290+ CSS3 Buttons</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div></a>
+	</li>
+
+	<li class="all">
+		<a href="forms.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/create_write.png">
+			<span class="name sort_1">Fully Styled Forms</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="forms.php#date_picker_anchor" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/day_calendar.png">
+			<span class="name sort_1">Date Picker</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="new">
+		<a href="forms.php#alerts_anchor" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/alert.png">
+			<span class="name sort_1">Alert Boxes</span>
+			<span class="update sort_2">1</span>
+		<div class="starred blue"></div>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="layout.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/blocks_images.png">
+			<span class="name sort_1">960.gs Framework</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="text.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/fountain_pen.png">
+			<span class="name sort_1">Typography & Text</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="editor.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/word_document.png">
+			<span class="name sort_1">Rich Text Editor</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="gallery.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/images.png">
+			<span class="name sort_1">Sortable Gallery</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="gallery.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/image_2.png">
+			<span class="name sort_1">Fancybox Viewer</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="tables.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/table.png">
+			<span class="name sort_1">Dynamic Tables</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="cool">
+		<a href="files.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/file_cabinet.png">
+			<span class="name sort_1">File Browser</span>
+			<span class="update sort_2">0</span>
+		<div class="starred"></div>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="login.php" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/locked_2.png">
+			<span class="name sort_1">Login Box</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="#" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/shuffle.png">
+			<span class="name sort_1">CSS3 enhanced</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="all">
+		<a href="#" class="features">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/chrome.png">
+			<span class="name sort_1">Cross Browser (IE7+)</span>
+			<span class="update sort_2">0</span>
+		</a>
+	</li>
+
+	<li class="new">
+		<a href="#" class="features" onclick="$('#toTop').trigger('click');">
+			<img src="{{ STATIC_URL }}images/icons/large/grey/bended_arrow_up.png">
+			<span class="name sort_1">Scroll Top</span>
+			<span class="update sort_2">1</span>
+		<div class="starred blue"></div>
+		</a>
+	</li>
+
+</ul>					</div>
+				</div>
+			</div>
+		<div class="display_none">
+	<div id="dialog_register" class="dialog_content no_dialog_titlebar wide" title="Register for Adminica">
+		<div class="block">
+			<div class="section">
+				<h2>Registration Form</h2>
+			</div>
+			<div class="columns clearfix">
+				<div class="col_50">
+					<fieldset class="label_top top">
+						<label for="text_field_inline">Username<span>Between 5 and 20 characters</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_50">
+					<fieldset class="label_top top right">
+						<label for="text_field_inline">Username again…<span>so we know you're human</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="columns clearfix">
+				<div class="col_50">
+					<fieldset class="label_top">
+						<label for="text_field_inline">Password<span>Between 5 and 20 characters</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_50">
+					<fieldset class="label_top right">
+						<label for="text_field_inline">Repeat Password again…</label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<fieldset class="label_side bottom">
+				<label>Permission</label>
+				<div class="uniform inline clearfix">
+					<label for="agree_1"><input type="checkbox" name="agree_1" value="yes" id="agree_1"/>I agree with the terms and conditions</label>
+				</div>
+			</fieldset>
+
+
+
+			<div class="button_bar clearfix">
+				<button class="dark blue no_margin_bottom link_button" data-link="index.php">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Register</span>
+				</button>
+				<button class="light send_right close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>		<div class="display_none">
+	<div id="dialog_welcome" class="dialog_content no_dialog_titlebar wide" title="Welcome to Adminica">
+
+		<div class="block lines">
+			<div class="columns clearfix">
+				<div class="col_50 no_border_top">
+					<div class="section">
+						<h1>Adminica</h1>
+						<p><strong>Adminica</strong> is a <strong>cleanly coded</strong>, <strong>beautifully styled</strong>, easily <strong>customisable</strong>, <strong>cross-browser</strong> compatible <strong>Web Application Interface</strong>.</p>
+
+						<p><strong>Adminica</strong> is packed full of features, allowing you<strong> unlimited combinations</strong> of layouts, controls and styles to ensure you have a <strong>trully unique app</strong>. </p>
+
+						<p><strong>Adminica</strong>  can <strong>scale itself automatically</strong> to fit whatever screen resolution the user has. The interface<strong> works perfectly all the way down to iPhone size</strong></p>
+					</div>
+				</div>
+				<div class="col_50 no_border_top no_border_right">
+					<div class="section">
+						<h2>Features</h2>
+					</div>
+					<ul class="flat large text">
+						<li><a href="{{ STATIC_URL }}styles/themes/skin_switcher.php?style=theme_light.css">Light</a> and <a href="styles/themes/skin_switcher.php?style=switcher.css">Dark</a> Theme</li>
+						<li><a href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=layout_fixed.css">Fixed</a> and <a href="styles/themes/layout_switcher.php?style=switcher.css">Fluid</a> width layout</li>
+						<li><a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=switcher.css">Sidebar</a>, <a href="styles/themes/nav_switcher.php?style=nav_top.css">Full Width</a>, <a href="styles/themes/nav_switcher.php?style=nav_slideout.css">Slide Menu</a> or <a href="styles/themes/nav_switcher.php?style=nav_slideout.css">Stack Menu</a>.</li>
+						<li class="theme_colour">
+							<a class="black" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=switcher.css">
+								<span>Black</span></a>
+							<a class="blue" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_blue.css">
+								<span>Blue</span></a>
+							<a class="navy" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_navy.css">
+								<span>Navy</span></a>
+							<a class="red" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_red.css">
+								<span>Red</span></a>
+								<span>Green</span></a>
+							<a class="magenta" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_magenta.css">
+								<span>Magenta</span></a>
+							<a class="orange" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_brown.css">
+								<span>Brown</span></a>
+						</li>
+					</ul>
+					<fieldset class="label_side label_small no_lines" style="border-top:0;">
+						<label>All Pages</label>
+						<div class="clearfix">
+							<div id="pagesSelect"></div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="columns clearfix no_lines">
+				<div class="col_33">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/book.png">
+								<span>Documentation</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/help.png">
+								<span>Support Forum</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33 no_border_right">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light link_button" data-link="http://themeforest.net/user/Tricycle">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/speech_bubble_2.png">
+								<span>Contact</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div class="columns clearfix no_lines">
+				<div class="col_33">
+					<fieldset class="label_top">
+						<label for="text_field_inline">Themeforest Username</label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33">
+
+					<fieldset class="label_top">
+						<label for="text_field_inline">Email Address<span>required</span></label>
+						<div>
+							<input type="email" >
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33 no_border_right">
+					<fieldset class="label_top empty_label">
+						<div class="clearfix">
+							<button class="full_width" ><span>Subscribe for Updates</span></button>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="button_bar clearfix" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+				<button class="dark blue close_dialog wide">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Submit</span>
+				</button>
+				<button class="light send_right close_dialog wide">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Close</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>		<div class="display_none">
+	<div id="dialog_logout" class="dialog_content narrow" title="Logout">
+		<div class="block">
+			<div class="section">
+				<h1>Thank you</h1>
+				<div class="dashed_line"></div>
+				<p>We will now log you out of Adminica in a 10 seconds...</p>
+			</div>
+			<div class="button_bar clearfix">
+                            <button class="dark blue no_margin_bottom link_button" onclick="location.href='www.google.co.in'">
+					<div class="ui-icon ui-icon-check"></div>
+                                        <span>Ok</span>
+				</button>
+				<button class="light send_right close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div> 		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#dialog_welcome").dialog("open");
+		});
+		</script>
+		<div class="display_none">
+	<div id="dialog_register" class="dialog_content no_dialog_titlebar wide" title="Register for Adminica">
+		<div class="block">
+			<div class="section">
+				<h2>Registration Form</h2>
+			</div>
+			<div class="columns clearfix">
+				<div class="col_50">
+					<fieldset class="label_top top">
+						<label for="text_field_inline">Username<span>Between 5 and 20 characters</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_50">
+					<fieldset class="label_top top right">
+						<label for="text_field_inline">Username again…<span>so we know you're human</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="columns clearfix">
+				<div class="col_50">
+					<fieldset class="label_top">
+						<label for="text_field_inline">Password<span>Between 5 and 20 characters</span></label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_50">
+					<fieldset class="label_top right">
+						<label for="text_field_inline">Repeat Password again…</label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<fieldset class="label_side bottom">
+				<label>Permission</label>
+				<div class="uniform inline clearfix">
+					<label for="agree_1"><input type="checkbox" name="agree_1" value="yes" id="agree_1"/>I agree with the terms and conditions</label>
+				</div>
+			</fieldset>
+
+
+
+			<div class="button_bar clearfix">
+				<button class="dark blue no_margin_bottom link_button" data-link="index.php">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Register</span>
+				</button>
+				<button class="light send_right close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>		<div class="display_none">
+	<div id="dialog_form" class="dialog_content" title="Dialog with Form fields">
+		<div class="block">
+			<div class="section">
+				<div class="alert dismissible alert_black">
+					<img width="24" height="24" src="{{ STATIC_URL }}images/icons/small/white/alert_2.png">
+					<strong>All the form fields</strong> can be just as easily used in a dialog.
+				</div>
+			</div>
+			<fieldset class="label_side top">
+				<label>Text Field<span>Label placed beside the Input</span></label>
+				<div>
+					<input type="text">
+				</div>
+			</fieldset>
+
+			<fieldset class="label_side">
+				<label>Textarea<span>Regular Textarea</span></label>
+				<div class="clearfix">
+					<textarea class="autogrow"></textarea>
+				</div>
+			</fieldset>
+			<fieldset class="label_side">
+			<label>Bounce Slider<span>Slide to Unlock</span></label>
+				<div style="padding-top:25px;">
+					<div class="slider_unlock" title="Slide to Close"></div>
+					<button class="close_dialog display_none"></button>
+				</div>
+			</fieldset>
+			<div class="button_bar clearfix">
+				<button class="dark green close_dialog">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Submit</span>
+				</button>
+				<button class="dark red close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>		<div class="display_none">
+	<div id="dialog_delete" class="dialog_content narrow no_dialog_titlebar" title="Delete Confirmation">
+		<div class="block">
+			<div class="section">
+				<h1>Delete File</h1>
+				<div class="dashed_line"></div>
+				<p>Please confirm that you want to delete this file.</p>
+			</div>
+			<div class="button_bar clearfix">
+				<button class="delete_confirm dark red no_margin_bottom close_dialog">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Delete</span>
+				</button>
+				<button class="light send_right close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div> 		<div class="display_none">
+	<div id="dialog_welcome" class="dialog_content no_dialog_titlebar wide" title="Welcome to Adminica">
+
+		<div class="block lines">
+			<div class="columns clearfix">
+				<div class="col_50 no_border_top">
+					<div class="section">
+						<h1>Adminica</h1>
+						<p><strong>Adminica</strong> is a <strong>cleanly coded</strong>, <strong>beautifully styled</strong>, easily <strong>customisable</strong>, <strong>cross-browser</strong> compatible <strong>Web Application Interface</strong>.</p>
+
+						<p><strong>Adminica</strong> is packed full of features, allowing you<strong> unlimited combinations</strong> of layouts, controls and styles to ensure you have a <strong>trully unique app</strong>. </p>
+
+						<p><strong>Adminica</strong>  can <strong>scale itself automatically</strong> to fit whatever screen resolution the user has. The interface<strong> works perfectly all the way down to iPhone size</strong></p>
+					</div>
+				</div>
+				<div class="col_50 no_border_top no_border_right">
+					<div class="section">
+						<h2>Features</h2>
+					</div>
+					<ul class="flat large text">
+						<li><a href="{{ STATIC_URL }}styles/themes/skin_switcher.php?style=theme_light.css">Light</a> and <a href="styles/themes/skin_switcher.php?style=switcher.css">Dark</a> Theme</li>
+						<li><a href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=layout_fixed.css">Fixed</a> and <a href="styles/themes/layout_switcher.php?style=switcher.css">Fluid</a> width layout</li>
+						<li><a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=switcher.css">Sidebar</a>, <a href="styles/themes/nav_switcher.php?style=nav_top.css">Full Width</a>, <a href="styles/themes/nav_switcher.php?style=nav_slideout.css">Slide Menu</a> or <a href="styles/themes/nav_switcher.php?style=nav_slideout.css">Stack Menu</a>.</li>
+						<li class="theme_colour">
+							<a class="black" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=switcher.css">
+								<span>Black</span></a>
+							<a class="blue" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_blue.css">
+								<span>Blue</span></a>
+							<a class="navy" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_navy.css">
+								<span>Navy</span></a>
+							<a class="red" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_red.css">
+								<span>Red</span></a>
+							<a class="green" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_green.css">
+								<span>Green</span></a>
+							<a class="magenta" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_magenta.css">
+								<span>Magenta</span></a>
+							<a class="orange" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_brown.css">
+								<span>Brown</span></a>
+						</li>
+					</ul>
+					<fieldset class="label_side label_small no_lines" style="border-top:0;">
+						<label>All Pages</label>
+						<div class="clearfix">
+							<div id="pagesSelect"></div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="columns clearfix no_lines">
+				<div class="col_33">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/book.png">
+								<span>Documentation</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/help.png">
+								<span>Support Forum</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33 no_border_right">
+					<fieldset class="no_label">
+						<div class="clearfix">
+							<button class="full_width light link_button" data-link="http://themeforest.net/user/Tricycle">
+								<img src="{{ STATIC_URL }}images/icons/small/grey/speech_bubble_2.png">
+								<span>Contact</span>
+							</button>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div class="columns clearfix no_lines">
+				<div class="col_33">
+					<fieldset class="label_top">
+						<label for="text_field_inline">Themeforest Username</label>
+						<div>
+							<input type="text">
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33">
+
+					<fieldset class="label_top">
+						<label for="text_field_inline">Email Address<span>required</span></label>
+						<div>
+							<input type="email" >
+						</div>
+					</fieldset>
+				</div>
+				<div class="col_33 no_border_right">
+					<fieldset class="label_top empty_label">
+						<div class="clearfix">
+							<button class="full_width" ><span>Subscribe for Updates</span></button>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="button_bar clearfix" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+				<button class="dark blue close_dialog wide">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Submit</span>
+				</button>
+				<button class="light send_right close_dialog wide">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Close</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>		<div class="display_none">
+	<div id="dialog_logout" class="dialog_content narrow" title="Logout">
+		<div class="block">
+			<div class="section">
+				<h1>Thank you</h1>
+				<div class="dashed_line"></div>
+				<p>We will now log you out of Adminica in a 10 seconds...</p>
+			</div>
+			<div class="button_bar clearfix">
+				<button class="dark blue no_margin_bottom link_button" data-link="login_slide.php">
+					<div class="ui-icon ui-icon-check"></div>
+					<span>Ok</span>
+				</button>
+				<button class="light send_right close_dialog">
+					<div class="ui-icon ui-icon-closethick"></div>
+					<span>Cancel</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+		<div id="loading_overlay">
+			<div class="loading_message round_bottom">
+				<img src="{{ STATIC_URL }}images/interface/loading.gif" alt="loading" />
+			</div>
+		</div>
+
+		<div id="template_options" class="clearfix">
+	<h3><img src="images/interface/adminica.png" alt="Adminica"></h3>
+	<div class="layout_size">
+		<label>Layout:</label>
+		<a href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=switcher.css">Fluid</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/layout_switcher.php?style=layout_fixed.css">Fixed</a>
+	</div>
+	<div class="layout_position">
+		<label class="display_none">Header: </label>
+		<a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=switcher.css">Side</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_stacks.css">Stacks</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_top.css">Top</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/nav_switcher.php?style=nav_slideout.css">Slide</a>
+	</div>
+	<div class="layout_position">
+		<label>Theme: </label>
+		<a href="styles/themes/skin_switcher.php?style=multiple&skin_switcher.php=switcher.css&bg_switcher.php=switcher.css">Dark</a><span>|</span>
+		<a href="styles/themes/skin_switcher.php?style=multiple&skin_switcher.php=skin_light.css&bg_switcher.php=switcher.css">Light</a>
+	</div>
+	<div class="theme_colour">
+		<label class="display_none">Colour:</label>
+		<a class="black" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=switcher.css"><span>Black</span></a>
+		<a class="blue" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_blue.css"><span>Blue</span></a>
+		<a class="navy" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_navy.css"><span>Navy</span></a>
+		<a class="red" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_red.css"><span>Red</span></a>
+		<a class="green" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_green.css"><span>Green</span></a>
+		<a class="magenta" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_magenta.css"><span>Magenta</span></a>
+		<a class="orange" href="{{ STATIC_URL }}styles/themes/theme_switcher.php?style=theme_brown.css"><span>Brown</span></a>
+	</div>
+	<div class="theme_background" id="bg_dark">
+		<label>BGs:</label>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_wunder.css">NEW</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=switcher.css">Boxes</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_punched.css">Punched</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_honeycomb.css">Honeycomb</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_wood.css">Wood</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_dark_wood.css">Timber</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_noise.css">Noise</a>
+	</div>
+	<div class="theme_background" id="bg_light">
+		<label>BGs:</label>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=switcher.css">Silver</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_white_wood.css">Wood</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_squares.css">Squares</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_noise_zero.css">Noise</a><span>|</span>
+		<a href="{{ STATIC_URL }}styles/themes/bg_switcher.php?style=bg_stripes.css">Stripes</a>
+	</div>
+</div>
+
+
+<!-- Google Analytics Code (Remove if not needed)
+
+		<script type="text/javascript">
+
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-*******-*']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+
+		</script>
+-->
+
+		</div>
+	</body>
+</html>

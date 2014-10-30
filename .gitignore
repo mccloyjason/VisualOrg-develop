@@ -1,0 +1,46 @@
+*.pyc
+nbproject/
+# MAC
+.DS_Store
+*.DS_Store
+*/.DS_Store
+._*
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+.idea
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+chromedriver.log
+
+# sass
+.sass-cache/
+*.scssc
+
+#Mr Developer
+local_settings.py
+
+# Static content
+static/build/*
+node_modules
+npm-debug.log
+media/*
+whoosh/*
+kuwaitoasis/server_settings.py
+apache/site.wsgi
+django.log
