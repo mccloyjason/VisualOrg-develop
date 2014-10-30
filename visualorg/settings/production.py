@@ -8,7 +8,7 @@ DATABASES = {
         'NAME':'visualorg_db',
         'USER':'visualorg',
         'PASSWORD':'visualorg',
-        'HOST':'54.200.253.8',
+        'HOST':'ec2-54-200-253-8.us-west-2.compute.amazonaws.com',
         'PORT':'5432',
     }
 }
