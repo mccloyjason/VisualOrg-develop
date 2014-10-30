@@ -5,7 +5,7 @@ DEBUG=True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'',
+        'NAME':'visual_database',
         'USER':'visualorg',
         'PASSWORD':'visualorg',
         'HOST':'ec2-54-200-253-8.us-west-2.compute.amazonaws.com',
