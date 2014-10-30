@@ -13,6 +13,7 @@ DATABASES = {
     }
 }
 
+print "DATABASESDATABASES",DATABASES
 EMAIL_SUBJECT_PREFIX = "[Visual Org]"
 
 EMAIL_HOST          = 'smtp.gmail.com'
