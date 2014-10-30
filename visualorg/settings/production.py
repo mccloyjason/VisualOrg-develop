@@ -5,15 +5,13 @@ DEBUG=True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'visualorg_db',
+        'NAME':'',
         'USER':'visualorg',
         'PASSWORD':'visualorg',
         'HOST':'ec2-54-200-253-8.us-west-2.compute.amazonaws.com',
         'PORT':'5432',
     }
 }
-
-print "DATABASESDATABASES",DATABASES
 EMAIL_SUBJECT_PREFIX = "[Visual Org]"
 
 EMAIL_HOST          = 'smtp.gmail.com'
